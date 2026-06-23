@@ -1,14 +1,50 @@
-# Control-de-Indicadores-de-Planta---Tintorer-a-de-Hilos
-Este proyecto contiene la estructura inicial del backend para el sistema de indicadores de Tintorería de Hilos.
+# 📘 Control de Indicadores de Planta – Tintorería de Hilos
 
-El objetivo es registrar mediciones físicas por lote, máquina y huso, permitiendo calcular indicadores como densidad de bobinas, dureza, promedio por lote, variabilidad y estado del proceso.
+Sistema backend en **Python + FastAPI** para el registro, cálculo y análisis de indicadores operativos en el proceso de Tintorería de Hilos.
 
-La lógica está organizada en módulos para separar responsabilidades:
+---
 
-- models: estructura de datos.
-- core: reglas de cálculo, fórmulas físicas, máquinas, calidad y SPC.
-- api: funciones o endpoints para registrar mediciones y cerrar lotes.
-- services: conexión futura a base de datos.
-- utils: funciones auxiliares.
+## 🎯 Objetivo del sistema
 
-Este backend servirá como base para conectar formularios del frontend, dashboards operativos y validaciones de planta.
+Este proyecto permite registrar mediciones físicas por lote, máquina y huso, con el fin de calcular indicadores clave como:
+
+- 📦 Densidad de bobinas antes del teñido  
+- 🧪 Dureza del hilo después del proceso  
+- 📊 Promedios y variabilidad por lote  
+- 🎯 Estados de calidad (BAJO / ÓPTIMO / ALTO)  
+- 📉 Control estadístico del proceso (SPC)  
+
+---
+
+## 🧠 Arquitectura del sistema
+
+```text
+backend/
+│
+├── main.py                      # 🚀 Punto de entrada FastAPI
+│
+├── models/
+│   └── registro.py             # 📦 Estructura del dato (Pydantic)
+│
+├── core/
+│   ├── session.py              # 🔁 Estado del lote activo en memoria
+│   ├── machines.py             # ⚙️ Catálogo de máquinas y husos
+│   ├── geometry.py             # 📐 Cálculos geométricos (volumen)
+│   ├── material_rules.py       # 🧱 Reglas físicas del material
+│   ├── density_engine.py       # 🧠 Cálculo de densidad industrial
+│   ├── quality_engine.py       # 🎯 Clasificación de calidad
+│   └── spc.py                  # 📊 Control estadístico del proceso
+│
+├── api/
+│   ├── register.py             # 📊 Registro de mediciones por huso
+│   ├── lot.py                 # 🔁 Cierre de lote + promedios
+│   └── machines.py            # ⚙️ Consulta de husos por máquina
+│
+├── services/
+│   └── db.py                  # 💾 Conexión futura a MariaDB / MySQL
+│
+├── schemas/
+│   └── requests.py            # 📥 Estructura de entrada del frontend
+│
+└── utils/
+    └── time.py               # ⏱️ Utilidades de fecha y control horario

@@ -2,7 +2,7 @@
 
 def calcular_estado(material, proceso, valor):
 
-    if proceso == "Pre-Teñido":
+    if proceso == "BOBINAR HILO":
 
         if material == "Algodón":
             return "BAJO" if valor < 0.35 else "OPTIMO" if valor <= 0.40 else "ALTO"
@@ -13,7 +13,7 @@ def calcular_estado(material, proceso, valor):
         if material == "Poliester":
             return "BAJO" if valor < 0.35 else "OPTIMO" if valor <= 0.39 else "ALTO"
 
-    if proceso == "Teñido":
+    if proceso == "ENCONAR HILO":
 
         if material == "Algodón":
             return "BAJO" if valor < 0.40 else "OPTIMO" if valor <= 0.45 else "ALTO"

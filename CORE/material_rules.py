@@ -5,22 +5,22 @@ import math
 ALTURA = {
     "Permeabilidad Alta": 14.67,
     "Permeabilidad Baja": 14.77,
-    "Cartón Bobina": 15.38,
-    "Cartón Enconado": 15.70
+    "Rodete de Cartón": 15.38,
+    "Cono de Cartón": 15.70
 }
 
 DINT = {
     "Permeabilidad Alta": 6.4,
     "Permeabilidad Baja": 6.4,
-    "Cartón Bobina": 6.3,
-    "Cartón Enconado": 5.5
+    "Rodete de Cartón": 6.3,
+    "Cono de Cartón": 5.5
 }
 
 PESO_TUBO = {
     "Permeabilidad Alta": 126.01,
     "Permeabilidad Baja": 139.58,
-    "Cartón Bobina": 54.58,
-    "Cartón Enconado": 38.48
+    "Rodete de Cartón": 54.58,
+    "Cono de Cartón": 38.48
 }
 
 

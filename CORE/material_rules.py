@@ -37,13 +37,13 @@ def calcular_vcor(material, proceso, tipo):
     if material != "Poliester":
         return 0
 
-    if tipo != "Cartón Bobina":
+    if tipo != "Rodete de Cartón":
         return 0
 
-    if proceso == "Pre-Teñido":
+    if proceso == "BOBINAR HILO":
         return 18.36
 
-    if proceso == "Teñido":
+    if proceso == "ENCONAR HILO":
         return 19.119
 
     return 0

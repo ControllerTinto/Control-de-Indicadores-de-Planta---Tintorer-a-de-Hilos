@@ -12,7 +12,7 @@ class Registro(BaseModel):
     maquina: str        # ⚙️ ME-01 / MB-02
     huso: int           # 🔢 posición del huso
 
-    proceso: str        # 🔄 Pre-Teñido / Teñido
+    proceso: str        # 🔄 BOBINAR HILO / ENCONAR HILO
     material: str       # 🧵 Algodón / Nylon / Poliéster
     tipo_soporte: str   # 🧱 Rodete / Cartón
 

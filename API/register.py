@@ -23,7 +23,7 @@ def grabar(data):
     }
 
     # 🟢 PRE-TEÑIDO → DENSIDAD
-    if lote["proceso"] == "Pre-Teñido":
+    if lote["proceso"] == "BOBINAR HILO":
 
         r = calcular_densidad(
             lote["proceso"],
@@ -49,7 +49,7 @@ def grabar(data):
         "valor": data["dureza"],
         "tipo_medicion": "DUREZA",
         "unidad": "PSI",
-        "estado": calcular_estado(lote["material"], "Teñido", data["dureza"])
+        "estado": calcular_estado(lote["material"], "ENCONAR HILO", data["dureza"])
     })
 
     # 🧹 limpiar UI (huso, dureza)

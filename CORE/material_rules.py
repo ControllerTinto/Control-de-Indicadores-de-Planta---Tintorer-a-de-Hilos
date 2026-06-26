@@ -5,22 +5,22 @@ import math
 ALTURA = {
     "Permeabilidad Alta": 14.67,
     "Permeabilidad Baja": 14.77,
-    "Rodete de Cartón": 15.38,
-    "Cono de Cartón": 15.70
+    "Cartón Bobina": 15.38,
+    "Cartón Enconado": 15.70
 }
 
 DINT = {
     "Permeabilidad Alta": 6.4,
     "Permeabilidad Baja": 6.4,
-    "Rodete de Cartón": 6.3,
-    "Cono de Cartón": 5.5
+    "Cartón Bobina": 6.3,
+    "Cartón Enconado": 5.5
 }
 
 PESO_TUBO = {
     "Permeabilidad Alta": 126.01,
     "Permeabilidad Baja": 139.58,
-    "Rodete de Cartón": 54.58,
-    "Cono de Cartón": 38.48
+    "Cartón Bobina": 54.58,
+    "Cartón Enconado": 38.48
 }
 
 
@@ -37,13 +37,13 @@ def calcular_vcor(material, proceso, tipo):
     if material != "Poliester":
         return 0
 
-    if tipo != "Rodete de Cartón":
+    if tipo != "Cartón Bobina":
         return 0
 
-    if proceso == "BOBINAR HILO":
+    if proceso == "Pre-Teñido":
         return 18.36
 
-    if proceso == "ENCONAR HILO":
+    if proceso == "Teñido":
         return 19.119
 
     return 0
